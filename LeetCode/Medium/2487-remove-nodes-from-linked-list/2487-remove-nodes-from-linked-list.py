@@ -4,49 +4,30 @@
 #         self.val = val
 #         self.next = next
 
-class Stack:
-    def __init__(self):
-        self.stack = []
-        self.top = None
-        self.head = None
 
-    def push(self,node):
-        self.stack.append(node)
-    
-    def pop(self):
-        self.stack.pop()
-     
-    def peek(self):
-        return self.stack[-1]
-
-    def size(self):
-        return len(self.stack)
-
-    def isEmpty(self):
-        return len(self.stack) == 0
 class Solution:
     
     def removeNodes(self, head: ListNode | None) -> ListNode | None:
-        stack = Stack()
-        stack.push(head)
+        stack = []
+        stack.append(head)
         max = head.val
         while head:
-            if head.val > stack.peek().val:
+            if head.val > stack[-1].val:
                 max = head.val
-                while stack.isEmpty() == False and stack.peek().val < max:
+                while len(stack) != 0 and stack[-1].val < max:
                     stack.pop()
-                stack.push(head)
+                stack.append(head)
             
             else:
-                stack.push(head)
+                stack.append(head)
                 
             
             head = head.next
 
-        for i in range(0,stack.size()-1):
-            stack.stack[i].next = stack.stack[i+1]
+        for i in range(0,len(stack)-1):
+            stack[i].next = stack[i+1]
 
-        return stack.stack[0]
+        return stack[0]
             
 
         
