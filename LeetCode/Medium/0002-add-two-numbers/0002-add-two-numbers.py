@@ -11,7 +11,6 @@ class Solution:
         carry = 0
         while l1 or l2 or carry != 0:
             sum = carry
-            
             if l1:
                 sum = sum + l1.val
                 l1 = l1.next
@@ -21,17 +20,16 @@ class Solution:
                 l2 = l2.next
             
             carry = sum // 10
+            
             current.next = ListNode(sum % 10)
             
             current = current.next
-
-        return dummy.next
-
-                
-                
-                
-
             
+        return dummy.next
+        
+            
+
+                
 
 
                 
