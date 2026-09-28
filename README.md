@@ -30,4 +30,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [2487-remove-nodes-from-linked-list](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Medium/2487-remove-nodes-from-linked-list/) | Medium |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0125-valid-palindrome](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0125-valid-palindrome/) | Easy |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0125-valid-palindrome](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0125-valid-palindrome/) | Easy |
 <!---LeetCode Topics End-->
