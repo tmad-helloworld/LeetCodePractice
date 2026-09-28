@@ -5,28 +5,22 @@
 #         self.next = next
 class Solution:
     def mergeNodes(self, head: ListNode | None) -> ListNode | None:
-        sum = 0
         dummy = ListNode()
         current = dummy
-        pointer = None
-        
+        head = head.next
+        sum = 0
         while head:
             if head.val == 0:
-                if sum == 0:
-                    head = head.next
-                    continue
-                    
-                else:
-                    current.next = ListNode(sum)
-                    sum = 0
-                    current = current.next
+                current.next = ListNode(sum)
+                sum = 0
+                current = current.next
+                
             
             else:
                 sum = sum + head.val
-            
-            
+
             head = head.next
 
         return dummy.next
-                    
+      
         
