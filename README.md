@@ -46,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0001-two-sum](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0001-two-sum/) | Easy |
 | [0011-container-with-most-water](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Medium/0011-container-with-most-water/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
@@ -59,4 +60,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Medium/0005-longest-palindromic-substring/) | Medium |
+## Hash Table
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0001-two-sum](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0001-two-sum/) | Easy |
 <!---LeetCode Topics End-->
