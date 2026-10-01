@@ -3,14 +3,15 @@ class Solution:
         seen = {}
         result = []
         counter = 0
-        for i in nums:
-            if f"{target-i}" in seen:
-                result.append(seen[f"{target-i}"])
+        for n in nums:
+            if f"{(target-n)}" in seen:
+                result.append(seen[f"{target-n}"])
                 result.append(counter)
 
             else:
-                seen[f"{i}"] = counter
-
+                seen[f"{n}"] = counter
             counter += 1
-
+                
         return result
+            
+        
