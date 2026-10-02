@@ -6,34 +6,35 @@
 class Solution:
     def swapPairs(self, head: ListNode | None) -> ListNode | None:
         dummy = ListNode()
+
         current = dummy
         
-        if head:
-            
-            while head:
-                
-                if head.next:
-                    if head.next.next:
-                        temp = head.next.next
-                    else:
-                        temp = None
+        while head:
+            if head.next:
+                if head.next.next:
+                    temp = head.next.next
 
-                    current.next = head.next
-                    current.next.next = head
-                    head.next = temp
-                    
-                    
-                    current = current.next.next
-                
-               
                 else:
-                    current.next = head
-                head = head.next
+                    temp = None
 
-                
-   
+                current.next = head.next
+                current.next.next = head
+                head.next = temp
+                current = current.next.next
+
+            else:
+                current.next = head #1 Node in a list Case
+
+            
+
+            head=head.next
+
+        
+            
+            
+        
+
+
 
         return dummy.next
-                
-        
         
