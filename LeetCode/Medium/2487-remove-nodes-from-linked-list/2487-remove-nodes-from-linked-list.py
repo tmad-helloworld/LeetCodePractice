@@ -16,9 +16,9 @@ class Solution:
         counter = -1
         
         highest = stack.pop()
-        length = len(stack)
+        
         current = ListNode(highest)
-        while -(counter) <= length:
+        while -(counter) <= len(stack):
             if stack[counter] <  highest:
                 pass
                 
