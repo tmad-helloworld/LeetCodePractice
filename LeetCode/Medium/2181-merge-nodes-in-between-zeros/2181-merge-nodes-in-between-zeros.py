@@ -12,15 +12,15 @@ class Solution:
         while head:
             if head.val == 0:
                 current.next = ListNode(sum)
-                sum = 0
                 current = current.next
-                
-            
+                head = head.next
+                sum = 0
+                continue
+
             else:
                 sum = sum + head.val
-
+            
             head = head.next
 
         return dummy.next
-      
         
