@@ -7,7 +7,8 @@ class Solution:
             
         if char == char[::-1]:
             return True
-
-        else:
-            return False
+    
+            
         
+        return False
+       
