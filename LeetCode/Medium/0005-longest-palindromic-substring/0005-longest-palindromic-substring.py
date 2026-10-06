@@ -1,28 +1,37 @@
 
 
 class Solution:
-    def expandFromMiddle(self,s:str, left: int, right: int) -> str:
+    def expandFromMiddle(self,left,right,s):
         
         while left >= 0 and right < len(s) and s[left] == s[right]:
-            left = left - 1
-            right = right + 1
-
+            left -= 1
+            right += 1
 
         return s[left + 1:right]
+            
+                
     
     def longestPalindrome(self, s: str) -> str:
-        substring = ""
+        subString = ""
+        
         for i in range(0,len(s)):
-            odd = self.expandFromMiddle(s,i,i)
-            if len(odd) > len(substring):
-                substring = odd
+            odd = self.expandFromMiddle(i,i,s)
+            if len(odd) > len(subString):
+                subString = odd
 
-            even = self.expandFromMiddle(s,i,i+1)
-            if len(even) > len(substring):
-                substring = even
+            
+            even = self.expandFromMiddle(i,i+1,s)
+            if len(even) > len(subString):
+                subString = even
 
-        return substring
-
+        
+        return subString
+            
+           
+                
+            
+            
+        
 
                 
                 
