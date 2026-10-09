@@ -30,6 +30,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0020-valid-parentheses](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0020-valid-parentheses/) | Easy |
 | [0094-binary-tree-inorder-traversal](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0094-binary-tree-inorder-traversal/) | Easy |
 | [2487-remove-nodes-from-linked-list](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Medium/2487-remove-nodes-from-linked-list/) | Medium |
 ## Monotonic Stack
@@ -47,6 +48,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0005-longest-palindromic-substring](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Medium/0005-longest-palindromic-substring/) | Medium |
+| [0020-valid-parentheses](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0020-valid-parentheses/) | Easy |
 | [0125-valid-palindrome](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0125-valid-palindrome/) | Easy |
 ## Array
 | Problem Name | Difficulty |
@@ -81,4 +83,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0094-binary-tree-inorder-traversal/) | Easy |
+## Bracket Sequences
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0020-valid-parentheses](https://github.com/tmad-helloworld/LeetCodePractice/tree/main/LeetCode/Easy/0020-valid-parentheses/) | Easy |
 <!---LeetCode Topics End-->
