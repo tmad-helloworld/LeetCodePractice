@@ -3,39 +3,30 @@ class Solution:
         stack = []
 
         for par in s:
-            match (par):
-                case ")":
-                    if len(stack) > 0:
+            if len(stack) == 0:
+                stack.append(par)
+            else:
+                match (par):
+                    case ")":
                         if stack.pop() == "(":
                             continue
                         else:
                             return False
-                    else:
-                        return False
                     
-                case "]":
-                    if len(stack) > 0:
+                    case "]":
                         if stack.pop() == "[":
                             continue
-                    
-                        else: 
-                            return False
-                    else:
-                        return False
-
-                case "}":
-                    if len(stack) > 0:
-                        if stack.pop() == "{":
-                            continue
-
                         else:
                             return False
-                    else:
-                        return False
-                        
-                case _:
-                    stack.append(par)
-                    continue
+
+                    case "}":
+                        if stack.pop() == "{":
+                            continue
+                        else:
+                            return False
+                    
+                    case _:
+                        stack.append(par)
 
         if len(stack) == 0:
             return True
