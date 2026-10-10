@@ -1,34 +1,44 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        counter = 0
-        while counter < len(s):
-            if len(stack) == 0:
-                stack.append(s[counter])
-            else:
-                match s[counter]:
-                    case ")":
-                        if stack.pop() != "(":
-                            return False
-                        else:
-                            pass
-                    case "]":
-                        if stack.pop() != "[":
-                            return False
-                        else:
-                            pass
-                    case "}":
-                        if stack.pop() != "{":
-                            return False
-                        else:
-                            pass
 
-                    case _:
-                        stack.append(s[counter])
+        for par in s:
+            match (par):
+                case ")":
+                    if len(stack) > 0:
+                        if stack.pop() == "(":
+                            continue
+                        else:
+                            return False
+                    else:
+                        return False
+                    
+                case "]":
+                    if len(stack) > 0:
+                        if stack.pop() == "[":
+                            continue
+                    
+                        else: 
+                            return False
+                    else:
+                        return False
 
+                case "}":
+                    if len(stack) > 0:
+                        if stack.pop() == "{":
+                            continue
 
-            counter += 1
+                        else:
+                            return False
+                    else:
+                        return False
+                        
+                case _:
+                    stack.append(par)
+                    continue
+
         if len(stack) == 0:
             return True
         else:
             return False
+                    
