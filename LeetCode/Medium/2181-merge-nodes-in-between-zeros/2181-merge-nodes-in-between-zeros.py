@@ -11,16 +11,14 @@ class Solution:
         sum = 0
         while head:
             if head.val == 0:
-                current.next = ListNode(sum)
+                temp = ListNode(sum)
+                current.next = temp
                 current = current.next
-                head = head.next
                 sum = 0
-                continue
 
             else:
-                sum = sum + head.val
-            
-            head = head.next
+                sum += head.val
+
+            head=head.next
 
         return dummy.next
-        
