@@ -3,35 +3,28 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-
-
 class Solution:
-    
     def removeNodes(self, head: ListNode | None) -> ListNode | None:
         stack = []
         while head:
             stack.append(head.val)
             head = head.next
-            
-        counter = -1
-        
+
         highest = stack.pop()
-        
         current = ListNode(highest)
-        while -(counter) <= len(stack):
-            if stack[counter] <  highest:
-                pass
-                
-            
+        while len(stack) > 0:
+            temp_val = stack.pop()
+            if temp_val < highest:
+                continue
             else:
-                temp = ListNode(stack[counter])
-                temp.next = current
-                current = temp
-                highest = stack[counter]
-
-            counter = counter -1
-
-        return current
+                highest = temp_val
+                temp_node = ListNode(highest)
+                temp_node.next = current
+                current = temp_node
                 
-
-       
+        return current
+            
+        
+            
+            
+            
