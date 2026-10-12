@@ -4,7 +4,6 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    
     def addTwoNumbers(self, l1: ListNode | None, l2: ListNode | None) -> ListNode | None:
         dummy = ListNode()
         current = dummy
@@ -12,30 +11,17 @@ class Solution:
         while l1 or l2 or carry:
             sum = carry
             if l1:
-                sum = sum + l1.val
+                sum += l1.val
                 l1 = l1.next
-
-            if l2:
-                sum = sum + l2.val
-                l2 = l2.next
                 
+            if l2:
+                sum += l2.val
+                l2 = l2.next
+
             carry = sum // 10
             sum = sum % 10
-            current.next = ListNode(sum)
+            temp = ListNode(sum)
+            current.next = temp
             current = current.next
 
         return dummy.next
-        
-                
-    
-            
-        
-        
-            
-
-                
-
-
-                
-            
-        
