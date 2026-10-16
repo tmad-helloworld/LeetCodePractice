@@ -1,14 +1,21 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-
-        for par in s:
+        for ch in s:
             if len(stack) == 0:
-                stack.append(par)
+                stack.append(ch)
             else:
-                match (par):
+                match (ch):
+                    
                     case ")":
                         if stack.pop() == "(":
+                            continue
+                        else:
+                            return False
+                    
+                    
+                    case "}":
+                        if stack.pop() == "{":
                             continue
                         else:
                             return False
@@ -18,18 +25,9 @@ class Solution:
                             continue
                         else:
                             return False
-
-                    case "}":
-                        if stack.pop() == "{":
-                            continue
-                        else:
-                            return False
-                    
                     case _:
-                        stack.append(par)
+                        stack.append(ch)
 
-        if len(stack) == 0:
-            return True
-        else:
-            return False
-                    
+        if len(stack) != 0:
+            return False 
+        return True
